@@ -25,15 +25,15 @@ public class CustomerController {
         }
     }
 
-    public void validateSearch(Customer x, ProductDatabase pdb, Product product, CustomerController cc) {
+    public boolean validateSearch(Customer x, ProductDatabase pdb, Product product, CustomerController cc) {
 
-       // if (pdb.searchProduct(product) != -1) {
-         //   System.out.println ("aloooo");
+        if (pdb.searchProduct(product) != -1) {
+            System.out.println ("aloooo");
             cc.checkStock(pdb.searchProduct(product), x);
-           // return true;
-        //}
-        //else { System.out.println("No Product is found");}
-        //return false;
+            return true;
+        }
+        else { System.out.println("No Product is found");}
+        return false;
     }
 
     public void checkStock(int wanted, Customer cust) {
