@@ -36,9 +36,9 @@ public class AdminController {
         
         
         
-        public void CreateStats (Admin a,CustomerDatabase cd)
+        public void CreateStats (Admin a,CustomerDatabase cd,ProductDatabase pd)
         {
-        a.CreateStat(cd);
+        a.CreateStat(cd,pd);    
          }
 
 }

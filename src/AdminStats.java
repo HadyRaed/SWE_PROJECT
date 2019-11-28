@@ -8,10 +8,13 @@
  *
  * @author Hady
  */
-public class AdminStats {
+public class AdminStats 
+{
 
     private int sumOfUsers;
     private int sumOfProducts;
+    private int maxBought;
+    private int minBought;
 
     public int getSumOfUsers() {
         return sumOfUsers;
@@ -25,12 +28,7 @@ public class AdminStats {
         sumOfUsers = cd.getCounter();
     }
 
-    public void setSumOfProducts(int s) {
-        sumOfProducts = s;
+    public void setSumOfProducts(ProductDatabase pd) {
+        sumOfProducts = pd.getCounter();
     }
-    
-    
-    
-    
-
-}
+   }

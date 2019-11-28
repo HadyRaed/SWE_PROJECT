@@ -42,9 +42,10 @@ public class Admin {
 		}
 	}
 
-        public void CreateStat(CustomerDatabase cd)
+        public void CreateStat(CustomerDatabase cd,ProductDatabase pd)
 	{
 	as.setSumOfUsers(cd);
+        as.setSumOfProducts(pd);
 	}
 
 }

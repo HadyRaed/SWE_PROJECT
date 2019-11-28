@@ -10,12 +10,17 @@ import java.util.ArrayList;
 public class ProductDatabase {
 
 	ArrayList<Product> products = new ArrayList<>();
-
+        int Counter = 0;
 	public void add(Product p) {
 
 		products.add(p);
+                Counter ++;
 
 	}
+        public int getCounter()
+        {
+        return Counter;
+        }
 
 	public int searchProduct(Product product) {
 		int x = 0;

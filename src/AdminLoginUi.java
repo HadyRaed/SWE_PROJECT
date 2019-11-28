@@ -28,7 +28,7 @@ public class AdminLoginUi {
 			System.out.println("To add more products press 1");
                         System.out.println("To add more brands press 2");
                         System.out.println("To Create Stats press 3");
-                        System.out.println("To Exit");
+                        System.out.println("To Exit press 4");
 			Scanner p = new Scanner (System.in);
 			int adminInput = p.nextInt();
 					
@@ -45,7 +45,7 @@ public class AdminLoginUi {
                         
                         else if (adminInput==3)
                         {
-                         Acs.CreateStatsui(ac,cd,o);
+                         Acs.CreateStatsui(ac,cd,o,pdb);
                         }
                         
                         
