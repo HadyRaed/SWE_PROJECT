@@ -2,13 +2,15 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class AdminLoginUi {
-	Admindb adb = new Admindb();
-	ProductDatabase pdb = new ProductDatabase();
-    brandDatabase bdb = new brandDatabase();
-    adminController ac =new adminController();
+    Admindb adb = new Admindb();
+    ProductDatabase pdb = new ProductDatabase();
+    BrandDatabase bdb = new BrandDatabase();
+    AdminController ac =new AdminController();
     AdminAddProductUi AdminProduct =new AdminAddProductUi();
     AdminAddBrandUi  AdminBrand=new AdminAddBrandUi();
-	public void ShowAdminLoginForm() throws IOException
+    CreateStatsUi Acs = new CreateStatsUi();
+    
+	public void ShowAdminLoginForm(CustomerDatabase cd) throws IOException
 	{
 		System.out.println("Enter your Id");
 		Scanner z=new Scanner(System.in);
@@ -25,20 +27,29 @@ public class AdminLoginUi {
 		{
 			System.out.println("To add more products press 1");
                         System.out.println("To add more brands press 2");
-                        System.out.println("To exit press 3");
+                        System.out.println("To Create Stats press 3");
+                        System.out.println("To Exit");
 			Scanner p = new Scanner (System.in);
 			int adminInput = p.nextInt();
 					
                         if (adminInput==1)
 			{
-                        	AdminProduct.AdminAddProduct(o, pdb);
-                   }
+                        AdminProduct.AdminAddProduct(o, pdb);
+                        }
                         
-                        else if (adminInput==2)
+                        else if (adminInput==2) 
 			{
-                        	AdminBrand.AdminAddBr(ac, o, bdb);
-		}
-                        else if(adminInput==3)
+                         AdminBrand.AdminAddBr(ac, o, bdb);
+                        }
+                       
+                        
+                        else if (adminInput==3)
+                        {
+                         Acs.CreateStatsui(ac,cd,o);
+                        }
+                        
+                        
+                        else if(adminInput==4)
                         {
                         flag=false;
                         

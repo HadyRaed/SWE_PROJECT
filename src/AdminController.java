@@ -8,14 +8,14 @@
  *
  * @author Hady
  */
-public class adminController {
+public class AdminController {
 
-	public boolean validateBrand(String b, brandDatabase bd) {
+	public boolean validateBrand(String b, BrandDatabase bd) {
 		if (bd.CheckBrandName(b) == true) {
 			return true;
 
 		} else {
-			;
+			
 
 			return false;
 		}
@@ -33,5 +33,12 @@ public class adminController {
 		}
 
 	}
+        
+        
+        
+        public void CreateStats (Admin a,CustomerDatabase cd)
+        {
+        a.CreateStat(cd);
+         }
 
 }

@@ -33,6 +33,7 @@ public int getCounter()
 			for (int i = 0; i < customers.size(); i++) {
 				if (customer.getUserName().contentEquals(customers.get(i).getUserName())) {
 					x = 1;
+                                        Counter++;
 					
 
 				}

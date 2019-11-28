@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class AdminAddBrandUi {
 
-	public void AdminAddBr(adminController ac,Admin o,brandDatabase bdb )
+	public void AdminAddBr(AdminController ac,Admin o,BrandDatabase bdb )
 	{
 		System.out.println("Enter brand Name");
 		Scanner brandN=new Scanner(System.in);

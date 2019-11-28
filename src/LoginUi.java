@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class LoginUi {
 	CAddStoreUi CAdd=new CAddStoreUi();
-    brandDatabase bdb = new brandDatabase();
-    adminController ac =new adminController();
+    BrandDatabase bdb = new BrandDatabase();
+    AdminController ac =new AdminController();
     ProductDatabase pdb = new ProductDatabase();
     ExistingStoreUi ExStore=new ExistingStoreUi();
     CreateStoreUi CrStore=new CreateStoreUi();
@@ -24,7 +24,7 @@ public class LoginUi {
 		
 		
 		Customer customerii=new Customer(Namee,Pass,Maill);
-		customerController cc = new customerController();
+		CustomerController cc = new CustomerController();
                 if (cc.validateLogin(customerii, cdb)==true) {
                     System.out.println ("1-Add a store \n 2-Buy product");
                             int val = x.nextInt();
@@ -33,7 +33,7 @@ public class LoginUi {
                     CAdd.AddStore(customerii);
                     break;
                     case 2:
-                    buyUi.buy(pdb,customerii);
+                    buyUi.buy(pdb,customerii,cc);
                 }
                 
                 }
@@ -54,10 +54,10 @@ public class LoginUi {
 		
 		
 		StoreOwner storeOwnerii=new StoreOwner(Nameee,Passs,Mailll);
-		storeOwnerController ss = new storeOwnerController ();
-		
+		StoreOwnerController ss = new StoreOwnerController ();
+		boolean check=true;
                         if (ss.validateLogin(storeOwnerii, sdb)){
-                         while(true)
+                         while(check)
                          {  System.out.println("1-Have an existing store?\n2-Create a store \n3-Logout");
 
                         
@@ -79,7 +79,7 @@ public class LoginUi {
                         }
                         else if(k==3)
                         {
-                          System.exit(0);
+                            check=false;
                         }
 		
             }}

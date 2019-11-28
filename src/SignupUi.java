@@ -17,7 +17,7 @@ System.out.println("Enter your mail");
 String Mail=x.next(); 
 
         Customer customeri=  new Customer(Name,Pass,Mail);
-customerController c=new customerController();
+CustomerController c=new CustomerController();
         c.validateRegister(customeri, cdb);
              
 	}
@@ -35,7 +35,7 @@ customerController c=new customerController();
 	String Mail1=x.next(); 
 	
          StoreOwner storeOwneri=  new StoreOwner(Name1,Pass1,Mail1);
-	storeOwnerController s = new storeOwnerController ();
+	StoreOwnerController s = new StoreOwnerController ();
          s.validateRegister(storeOwneri, sdb);
 	}
 	

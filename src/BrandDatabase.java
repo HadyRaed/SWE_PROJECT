@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class brandDatabase {
+public class BrandDatabase {
 
 	ArrayList<Brand> brands = new ArrayList<>();
 

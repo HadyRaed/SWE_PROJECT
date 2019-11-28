@@ -6,6 +6,7 @@ public class Admin {
 
 	private String ID;
 	private String password;
+        AdminStats as = new AdminStats();
 
 	Admin(String ID, String password) {
 		this.ID = ID;
@@ -27,7 +28,7 @@ public class Admin {
 
 	}
 
-	public void addBrand(Brand brand, brandDatabase bd) {
+	public void addBrand(Brand brand, BrandDatabase bd) {
 		bd.add(brand);
 
 	}
@@ -40,18 +41,10 @@ public class Admin {
 			return false;
 		}
 	}
-	public void CreateStat()
+
+        public void CreateStat(CustomerDatabase cd)
 	{
-		System.out.println("1- user");
-		System.out.println("2- products");
-		System.out.println("3- offers");
-		Scanner x = new Scanner(System.in);
-		int f=x.nextInt();
-		switch(f) {
-		case 1:
-			System.out.println(new CustomerDatabase().getCounter());
-		}
-	
+	as.setSumOfUsers(cd);
 	}
 
 }

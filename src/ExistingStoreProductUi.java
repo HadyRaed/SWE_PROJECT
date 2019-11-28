@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExistingStoreProductUi {
 	Scanner x = new Scanner(System.in);
-	public void AddStoreProducts(StoreOwner storeOwnerii,storeOwnerController ss,adminController ac,brandDatabase bdb,ProductDatabase pdb)
+	public void AddStoreProducts(StoreOwner storeOwnerii,StoreOwnerController ss,AdminController ac,BrandDatabase bdb,ProductDatabase pdb)
 	{
 		System.out.println("Enter product Name");
 

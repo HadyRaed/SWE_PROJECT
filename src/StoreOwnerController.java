@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Hady
  */
-public class storeOwnerController {
+public class StoreOwnerController {
 	public void validateRegister(StoreOwner x, StoreOwnerDatabase sdb) {
 
 		if (sdb.addStoreOwner(x) == true) {
@@ -36,13 +36,13 @@ public class storeOwnerController {
 
 	{
 		if (x.storesOfStoreOwner.size() == 0) {
-			System.out.println("dont exists");
+			System.out.println("Don't exists");
 
 			return false;
 		} else {
 			for (int i = 0; i < x.storesOfStoreOwner.size(); i++) {
 				if (storeName.contentEquals(x.storesOfStoreOwner.get(i).getStoreName())) {
-					System.out.println("exists");
+					System.out.println("Exists");
 
 					return true;
 
@@ -50,7 +50,7 @@ public class storeOwnerController {
 
 			}
 		}
-		System.out.println("dont exists");
+		System.out.println("Don't exists");
 		return false;
 	}
 }

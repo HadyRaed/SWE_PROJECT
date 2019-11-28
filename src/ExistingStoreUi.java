@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ExistingStoreUi {
 	Scanner x = new Scanner(System.in);
 	ExistingStoreProductUi ExStoreProduct =new ExistingStoreProductUi();
-	public void ExistingStore(StoreOwner storeOwnerii,storeOwnerController ss,adminController ac,brandDatabase bdb,ProductDatabase pdb)
+	public void ExistingStore(StoreOwner storeOwnerii,StoreOwnerController ss,AdminController ac,BrandDatabase bdb,ProductDatabase pdb)
 	{
 		System.out.println ("Enter Store Name");
         String storname=x.next();

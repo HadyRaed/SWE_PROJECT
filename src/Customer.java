@@ -53,20 +53,7 @@ public class Customer extends User {
 		}
 	}
 
-	public void buy(int p) {
-		System.out.println("enter the amount you want");
-		
-		Scanner y = new Scanner(System.in);
-        int z = y.nextInt();
-        
-        if(z>p) {
-        	System.out.println("not availabe in stock");
-        }else { System.out.println("Availabe");
-        System.out.println("enter the shipping address");
-        String ShipA=y.next();
-        
-        
-        }
+	
         
         
 
@@ -74,4 +61,4 @@ public class Customer extends User {
 
 	}
 
-}
+
