@@ -17,7 +17,7 @@ public class BuyUi {
         Scanner x = new Scanner(System.in);
         String prdName = x.next();
         Product z = new Product(prdName, 0, 0, null, 0, null);
-        cc.validateSearch(customerii, pdb, z,cc);
+        cc.validateSearch(customerii, pdb, z, cc);
 
     }
 }

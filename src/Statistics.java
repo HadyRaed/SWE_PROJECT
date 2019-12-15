@@ -9,51 +9,52 @@
  * @author Hady
  */
 public class Statistics {
-	private int numOfView;
-	private int numOfProducts;
-	private int soldOutProducts;
-	Product product;
 
-	Statistics() {
-	}
+    private int numOfView;
+    private int numOfProducts;
+    private int soldOutProducts;
+    Product product;
 
-	Statistics(int numOfView, int numOfProducts, int soldOutProducts) {
+    Statistics() {
+    }
 
-		this.numOfView = numOfView;
-		this.numOfProducts = numOfProducts;
-		this.soldOutProducts = soldOutProducts;
+    Statistics(int numOfView, int numOfProducts, int soldOutProducts) {
 
-	}
+        this.numOfView = numOfView;
+        this.numOfProducts = numOfProducts;
+        this.soldOutProducts = soldOutProducts;
 
-	public int getNumOfView() {
-		return numOfView;
-	}
+    }
 
-	public int getNumOfProducts() {
-		return numOfProducts;
-	}
+    public int getNumOfView() {
+        return numOfView;
+    }
 
-	public int getSoldOutProducts() {
-		return soldOutProducts;
-	}
+    public int getNumOfProducts() {
+        return numOfProducts;
+    }
 
-	public void UpdateOnView() {
-		numOfView++;
-	}
+    public int getSoldOutProducts() {
+        return soldOutProducts;
+    }
 
-	public void UpdateOnBuy() {
-		numOfProducts++;
-	}
+    public void UpdateOnView() {
+        numOfView++;
+    }
 
-	public boolean checkStock() {
+    public void UpdateOnBuy() {
+        numOfProducts++;
+    }
 
-		if (product.getStock() == 0) {
-			System.out.println("Product is out of stock");
-			return true;
-		} else {
-			return false;
-		}
+    public boolean checkStock() {
 
-	}
+        if (product.getStock() == 0) {
+            System.out.println("Product is out of stock");
+            return true;
+        } else {
+            return false;
+        }
+
+    }
 
 }

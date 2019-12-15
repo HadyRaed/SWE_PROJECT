@@ -4,24 +4,36 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Brand.java</file>
-            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Admin.java</file>
-            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Admindb.java</file>
-            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/brandDatabase.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/CustomerDatabase.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/AdminLogin.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/BrandDatabase.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/StoreOwnerDatabase.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/ExistingStoreUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/StoreOwnerController.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/BuyUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/SignupUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Login.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/CustomerController.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/AdminStats.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/ProductDatabase.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/AdminAddBrandUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/LoginUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Admin.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/CAddStoreUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Admindb.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Product.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/StoreOwner.java</file>
-            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/AdminLogin.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Statistics.java</file>
-            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/StoreOwnerDatabase.java</file>
-            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/customerController.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Store.java</file>
-            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Login.java</file>
-            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/adminController.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/CreateStoreUi.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/User.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Customer.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/Main.java</file>
-            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/ProductDatabase.java</file>
-            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/storeOwnerController.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/AdminAddProductUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/AdminController.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/AdminLoginUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/ExistingStoreProductUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE%202/SWE%20project/src/CreateStatsUi.java</file>
         </group>
     </open-files>
 </project-private>
