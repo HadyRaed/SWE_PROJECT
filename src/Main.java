@@ -1,66 +1,67 @@
+
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
-		CustomerDatabase cdb = new CustomerDatabase();
-		StoreOwnerDatabase sdb = new StoreOwnerDatabase();
-		
-		SignupUi Signup = new SignupUi();
-		LoginUi Login = new LoginUi();
-		AdminLoginUi AdminLogin = new AdminLoginUi();
+    public static void main(String[] args) throws IOException {
+        CustomerDatabase cdb = new CustomerDatabase();
+        StoreOwnerDatabase sdb = new StoreOwnerDatabase();
 
-		while (true) {
+        SignupUi Signup = new SignupUi();
+        LoginUi Login = new LoginUi();
+        AdminLoginUi AdminLogin = new AdminLoginUi();
 
-			System.out.println("Press 1 for signup");
-			System.out.println("Press 2 for login");
-			System.out.println("Press 3 for admin login");
-			Scanner x = new Scanner(System.in);
-			int y = x.nextInt();
+        while (true) {
 
-			switch (y) {
+            System.out.println("Press 1 for signup");
+            System.out.println("Press 2 for login");
+            System.out.println("Press 3 for admin login");
+            Scanner x = new Scanner(System.in);
+            int y = x.nextInt();
 
-			case 1:
+            switch (y) {
 
-				System.out.println("1- Signup as a Customer");
-				System.out.println("2- Signup as a Store Owner");
-				int j = x.nextInt();
-				switch (j) {
-				case 1:
+                case 1:
 
-					Signup.showSignupFormC(cdb);
+                    System.out.println("1- Signup as a Customer");
+                    System.out.println("2- Signup as a Store Owner");
+                    int j = x.nextInt();
+                    switch (j) {
+                        case 1:
 
-					break;
-				case 2:
-					Signup.showSignupFormS(sdb);
+                            Signup.showSignupFormC(cdb);
 
-					break;
-				}
-				break;
+                            break;
+                        case 2:
+                            Signup.showSignupFormS(sdb);
 
-			case 2:
-				System.out.println("1- Login as a customer");
-				System.out.println("2- Login as a storeowner");
+                            break;
+                    }
+                    break;
 
-				int f = x.nextInt();
+                case 2:
+                    System.out.println("1- Login as a customer");
+                    System.out.println("2- Login as a storeowner");
 
-				switch (f) {
-				case 1:
+                    int f = x.nextInt();
 
-					Login.showLoginFormC(cdb);
+                    switch (f) {
+                        case 1:
 
-					break;
-				case 2:
-					Login.showLoginFormS(sdb);
-				}
-				break;
+                            Login.showLoginFormC(cdb);
 
-			case 3:
-				AdminLogin.ShowAdminLoginForm(cdb);
+                            break;
+                        case 2:
+                            Login.showLoginFormS(sdb);
+                    }
+                    break;
 
-			}
+                case 3:
+                    AdminLogin.ShowAdminLoginForm(cdb);
 
-		}
-	}
+            }
+
+        }
+    }
 }

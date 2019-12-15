@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,11 +11,11 @@
  *
  * @author Hady
  */
-public class CreateStatsUi {
+public class collaboratorHandler {
+   public void addcollaborator(Collaborator collab, ArrayList <Collaborator> collabs)
+   {
+    
 
-    public void CreateStatsui(AdminController ac, CustomerDatabase cd, Admin x, ProductDatabase pd) {
-
-        ac.CreateStats(x, cd, pd);
-
-    }
-}
+   
+   
+   }

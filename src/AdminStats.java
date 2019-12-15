@@ -8,8 +8,7 @@
  *
  * @author Hady
  */
-public class AdminStats 
-{
+public class AdminStats {
 
     private int sumOfUsers;
     private int sumOfProducts;
@@ -31,4 +30,4 @@ public class AdminStats
     public void setSumOfProducts(ProductDatabase pd) {
         sumOfProducts = pd.getCounter();
     }
-   }
+}

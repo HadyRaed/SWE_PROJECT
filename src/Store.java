@@ -11,59 +11,66 @@ import java.util.TimerTask;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Hady
  */
 public class Store extends TimerTask {
-	private String storeName;
-	private String storeType;
-	private String storeLocation;
-	private String storeCategory;
-	private Statistics stats;
-	ArrayList<Product> prds = new ArrayList<>();
 
-	Store() {
-		stats = new Statistics();
-	}
+    private String storeName;
+    private String storeType;
+    private String storeLocation;
+    private String storeCategory;
+    private Statistics stats;
+    ArrayList<Product> prds = new ArrayList<>();
+    ArrayList<Collaborator>collabs= new ArrayList<>();
 
-	Store(String storeName, String storeLocation, String storeCategory) {
-		this.storeName = storeName;
-		this.storeLocation = storeLocation;
-		this.storeCategory = storeCategory;
-		Timer timer = new Timer();
-		timer.schedule(new Store(), 0, 60000);
-	}
+    Store() {
+        stats = new Statistics();
+    }
 
-	public String getStoreName() {
-		return storeName;
-	}
+    Store(String storeName, String storeLocation, String storeCategory) {
+        this.storeName = storeName;
+        this.storeLocation = storeLocation;
+        this.storeCategory = storeCategory;
+        Timer timer = new Timer();
+        timer.schedule(new Store(), 0, 60000);
+    }
 
-	public String getStoreLocation() {
-		return storeLocation;
-	}
+    public String getStoreName() {
+        return storeName;
+    }
 
-	public String getStoreCategory() {
-		return storeCategory;
-	}
+    public String getStoreLocation() {
+        return storeLocation;
+    }
 
-	public boolean addProductInStore(Product p, ProductDatabase pd) {
+    public String getStoreCategory() {
+        return storeCategory;
+    }
+public void set(String storeName, String storeLocation, String storeCategory)
+{
+     this.storeName = storeName;
+        this.storeLocation = storeLocation;
+        this.storeCategory = storeCategory;
+}
 
-		if (pd.searchProduct(p)!=-1) {
-			prds.add(p);
-			return true;
-		} else {
-			return false;
-		}
-	}
+    public boolean addProductInStore(Product p, ProductDatabase pd) {
 
-	@Override
-	public void run() {
-		System.out.println(stats.getNumOfProducts());
-		System.out.println(stats.getNumOfView());
-		System.out.println(stats.getSoldOutProducts());
+        if (pd.searchProduct(p) != -1) {
+            prds.add(p);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public void run() {
+        System.out.println(stats.getNumOfProducts());
+        System.out.println(stats.getNumOfView());
+        System.out.println(stats.getSoldOutProducts());
 //To change body of generated methods, choose Tools | Templates.
-	}
+    }
 
 }

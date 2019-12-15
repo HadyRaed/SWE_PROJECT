@@ -28,11 +28,12 @@ public class CustomerController {
     public boolean validateSearch(Customer x, ProductDatabase pdb, Product product, CustomerController cc) {
 
         if (pdb.searchProduct(product) != -1) {
-            System.out.println ("aloooo");
+            System.out.println("aloooo");
             cc.checkStock(pdb.searchProduct(product), x);
             return true;
+        } else {
+            System.out.println("No Product is found");
         }
-        else { System.out.println("No Product is found");}
         return false;
     }
 
@@ -51,4 +52,5 @@ public class CustomerController {
 
         }
 
-    }}
+    }
+}
