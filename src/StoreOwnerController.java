@@ -79,23 +79,7 @@ public class StoreOwnerController {
         }
 
     }
-/*public boolean CheckStore (String storename,ArrayList <Store>StoreChecking)
-{   int j=0;
-    for(int i=0;i<StoreChecking.size();i++)
-    {
-        if(storename==StoreChecking.get(i).getStoreName());
-        j=1;
-        
-    }
-    if (j==1){
-        return true;
-    }
-    else
-    {
-       return false;
-    }
-}
-        */
+
     public void addPdsInStore (String x,ArrayList <Store> stores,Product z,ProductDatabase px)
     {
     for (int i=0;i<stores.size();i++)
@@ -106,6 +90,31 @@ public class StoreOwnerController {
     
     }
     }}
+    public void editPdsInStore(ArrayList <Product> pds,int price,String prdName)
+    {
+    
+    for (int i=0;i<pds.size();i++)
+    {
+    if (prdName.contentEquals(pds.get(i).getProductName()))
+    {
+        pds.get(i).setPrice(price);
+    }
+    }
+    
+    }
+    
+     public void deletePdsInStore(ArrayList <Product> pds,String prdName)
+    {
+    
+    for (int i=0;i<pds.size();i++)
+    {
+    if (prdName.contentEquals(pds.get(i).getProductName()))
+    {
+        pds.remove(i);
+    }
+    }
+    
+    }
 
    public void addcollabs(String s,ArrayList <Store> stores,Collaborator c)
 {
@@ -119,17 +128,5 @@ public class StoreOwnerController {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

@@ -64,6 +64,14 @@ public void set(String storeName, String storeLocation, String storeCategory)
             return false;
         }
     }
+    public void editPdsInStore(StoreOwnerController s,int price,String n)
+    {
+    s.editPdsInStore(prds,price,n);
+    }
+     public void deletePdsInStore(StoreOwnerController s,String n)
+    {
+    s.deletePdsInStore(prds,n);
+    }
 
     @Override
     public void run() {
@@ -74,3 +82,4 @@ public void set(String storeName, String storeLocation, String storeCategory)
     }
 
 }
+
