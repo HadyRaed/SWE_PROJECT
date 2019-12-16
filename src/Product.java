@@ -21,6 +21,10 @@ public class Product {
 
         return productName;
     }
+     public void setPrice(int price) {
+
+        this.price=price;
+    }
 
     int getSerialNumber() {
         return serialNumber;
