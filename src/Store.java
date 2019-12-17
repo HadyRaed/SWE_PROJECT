@@ -52,7 +52,7 @@ public void set(String storeName, String storeLocation, String storeCategory)
             return false;
         }
     }
-    public void editPdsInStore(StoreOwnerController s,String storename, String productname, int price, ArrayList<Store> stores,History history)
+    public void editPdsInStore(StoreOwnerController s,String storename, String productname, double price, ArrayList<Store> stores,History history)
     {
     s.editPdsInStore(storename,productname,price,stores,history);
     }

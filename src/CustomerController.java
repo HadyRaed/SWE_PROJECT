@@ -25,30 +25,27 @@ public class CustomerController {
         }
     }
 
-    public boolean validateSearch(Customer x, ProductDatabase pdb, Product product, CustomerController cc) {
+    public boolean validateSearch(Customer x, ProductDatabase pdb, Product product, CustomerController cc,int givenQuantity) {
 
         if (pdb.searchProduct(product) != -1) {
-            System.out.println("aloooo");
-            cc.checkStock(pdb.searchProduct(product), x);
+            cc.Buy(givenQuantity,pdb.searchProduct(product), x);
             return true;
-        } else {
-            System.out.println("No Product is found");
-        }
-        return false;
+        } else 
+            return false;
     }
 
-    public void checkStock(int wanted, Customer cust) {
-        System.out.println("Enter the quantity you want");
+    public boolean Buy(int givenQuantity,int wanted, Customer cust) {
+       
 
-        Scanner y = new Scanner(System.in);
-        int z = y.nextInt();
-
-        if (z > wanted) {
-            System.out.println("not availabe in stock");
+        if (givenQuantity> wanted) {
+            return false;
         } else {
-            System.out.println("Availabe");
-            System.out.println("enter the shipping address");
-            String ShipA = y.next();
+            double newPrice=1;
+            if (givenQuantity>=2)
+            {
+            newPrice+=newPrice*0.10;
+            }
+            return true;
 
         }
 

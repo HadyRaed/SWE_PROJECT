@@ -86,7 +86,7 @@ public class StoreOwnerController {
         return false;
     }
 
-    public Product editPdsInStore(String storename, String productname, int price, ArrayList<Store> stores,History history) 
+    public Product editPdsInStore(String storename, String productname, double price, ArrayList<Store> stores,History history) 
     {
         Product prd=new Product(null,0,0,null,0,null);
         for (int i = 0; i < stores.size(); i++) 

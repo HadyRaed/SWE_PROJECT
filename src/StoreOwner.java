@@ -40,7 +40,7 @@ stc.addPdsInStore(y,storesOfStoreOwner,p,pd);
  public void addcollab (StoreOwnerController stc,String StoreName,Collaborator c)
  {
 stc.addcollabs(StoreName,storesOfStoreOwner,c);
-}
+ }
 
 
 

@@ -10,3 +10,4 @@ public class simpleControl {
     slot.execute();
     }
 }
+ 

@@ -3,7 +3,7 @@ public class Product {
 
     private String productName;
     private int serialNumber;
-    private int price;
+    private double price;
     private String category;
     private String brandName;
     private int Stock;
@@ -21,7 +21,7 @@ public class Product {
 
         return productName;
     }
-     public void setPrice(int price) {
+     public void setPrice(double price) {
 
         this.price=price;
     }
@@ -30,7 +30,7 @@ public class Product {
         return serialNumber;
     }
 
-    int getPrice() {
+    double getPrice() {
         return price;
     }
 

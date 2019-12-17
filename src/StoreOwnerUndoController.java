@@ -12,7 +12,7 @@ public class StoreOwnerUndoController {
     }
 
     public void UndoEdit(Store store, StoreOwnerController s, String storename, String productname, ArrayList<Store> stores, Product z, History history) {
-        int oldPrice=0;
+        double oldPrice=0;
         String old=null;
         boolean flag=false;
         for (int i = 0; i < history.editedProduct.size(); i++) {
