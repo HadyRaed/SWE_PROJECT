@@ -1,14 +1,7 @@
 
 import java.util.ArrayList;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/*
- * @author 
- */
+
 public class StoreOwnerController {
 
    
@@ -136,8 +129,4 @@ public class StoreOwnerController {
     }
 }
 
-//public void undoAdd(String x,ArrayList <Store> stores,Product z,ProductDatabase px,History history)
-//{
-//  this.deletePdsInStore();
-//}
-//}
+

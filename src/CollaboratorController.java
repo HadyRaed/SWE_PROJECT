@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 
 
-public class CollaboratorHandler {
+public class CollaboratorController {
 public void addProductsCollab(StoreOwnerController soc,String productname,ArrayList <Store> stores,Product product,ProductDatabase pdb,History history)
     {
     soc.addPdsInStore(productname, stores, product, pdb);

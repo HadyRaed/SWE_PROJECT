@@ -3,15 +3,6 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author Hady
- */
 public class Store extends TimerTask {
 
     private String storeName;
@@ -65,7 +56,7 @@ public void set(String storeName, String storeLocation, String storeCategory)
     {
     s.editPdsInStore(storename,productname,price,stores,history);
     }
-     public void deletePdsInStore(StoreOwnerController s,String storename, String productname, int price, ArrayList<Store> stores, Product z)
+     public void deletePdsInStore(StoreOwnerController s,String storename, String productname, ArrayList<Store> stores, Product z)
     {
     s.deletePdsInStore(storename,productname,stores,z);
     }

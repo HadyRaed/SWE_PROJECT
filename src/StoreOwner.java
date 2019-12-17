@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class StoreOwner extends User {
 
     ArrayList<Store> storesOfStoreOwner = new ArrayList<>();
-   // ArrayList<Collaborator> collaborators = new ArrayList<>();
 
 
     StoreOwner(String userName, String password, String email) {
