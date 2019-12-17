@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class StoreOwnerBuyController {
 
+    static int ProductCounter=0;
     public boolean validateSearch(StoreOwner storeowner, ProductDatabase pdb, Product product, StoreOwnerBuyController sobc, int givenQuantity) {
 
         if (pdb.searchProduct(product) != -1) {
@@ -19,6 +20,7 @@ public class StoreOwnerBuyController {
 
        // Scanner y = new Scanner(System.in);
         //int z = y.nextInt();
+     
         if (givenQuantity > wanted) {
             return false;
         } else {
@@ -27,6 +29,11 @@ public class StoreOwnerBuyController {
             if (givenQuantity>=2)
             {
             newPrice+=newPrice*0.10;
+            }
+            if (ProductCounter>=0)
+            {
+            newPrice+=newPrice*0.05;
+            ProductCounter++;
             }
             
             return true;
