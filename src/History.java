@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.List;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,11 +12,11 @@ import java.util.ArrayList;
  *
  * @author Hady
  */
-public class collaboratorHandler {
-   public void addcollaborator(Collaborator collab, ArrayList <Collaborator> collabs)
-   {
-    
+public class History {
+ ArrayList<Product> AddedProduct = new ArrayList<>();
+   ArrayList<Product> editedProduct = new ArrayList<>();
+   ArrayList<Product> oldPrices = new ArrayList<>();
 
+  
    
-   
-   }
+}

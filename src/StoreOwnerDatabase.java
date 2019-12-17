@@ -17,7 +17,7 @@ public class StoreOwnerDatabase {
     StoreOwnerDatabase() {
     }
 
-    ;
+    
 
 	public boolean addStoreOwner(StoreOwner storeOwner) {
         int x = 0;

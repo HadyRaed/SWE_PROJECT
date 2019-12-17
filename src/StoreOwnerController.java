@@ -11,6 +11,8 @@ import java.util.ArrayList;
  */
 public class StoreOwnerController {
 
+   
+
     public void validateRegister(StoreOwner x, StoreOwnerDatabase sdb) {
 
         if (sdb.addStoreOwner(x) == true) {
@@ -51,7 +53,7 @@ public class StoreOwnerController {
         return false;
     }
 
-    public void addStore(Store x,ArrayList<Store> storesOfStoreOwner) {
+    public void addStore(Store x, ArrayList<Store> storesOfStoreOwner) {
         boolean flag = false;
 
         if (storesOfStoreOwner.size() == 0) {
@@ -80,53 +82,62 @@ public class StoreOwnerController {
 
     }
 
-    public void addPdsInStore (String x,ArrayList <Store> stores,Product z,ProductDatabase px)
-    {
-    for (int i=0;i<stores.size();i++)
-    {
-    if (x.contentEquals(stores.get(i).getStoreName()))
-    {
-    stores.get(i).addProductInStore(z, px);
-    
-    }
-    }}
-    public void editPdsInStore(ArrayList <Product> pds,int price,String prdName)
-    {
-    
-    for (int i=0;i<pds.size();i++)
-    {
-    if (prdName.contentEquals(pds.get(i).getProductName()))
-    {
-        pds.get(i).setPrice(price);
-    }
-    }
-    
-    }
-    
-     public void deletePdsInStore(ArrayList <Product> pds,String prdName)
-    {
-    
-    for (int i=0;i<pds.size();i++)
-    {
-    if (prdName.contentEquals(pds.get(i).getProductName()))
-    {
-        pds.remove(i);
-    }
-    }
-    
+    public boolean addPdsInStore(String storename, ArrayList<Store> stores, Product z, ProductDatabase pdb) {
+        for (int i = 0; i < stores.size(); i++) {
+            if (storename.contentEquals(stores.get(i).getStoreName())) {
+                stores.get(i).addProductInStore(z, pdb);
+                return true;
+            }
+
+        }
+        return false;
     }
 
-   public void addcollabs(String s,ArrayList <Store> stores,Collaborator c)
-{
-    for (int i=0;i<stores.size();i++)
+    public Product editPdsInStore(String storename, String productname, int price, ArrayList<Store> stores,History history) 
     {
-    if (s.contentEquals(stores.get(i).getStoreName()))
-    {
-    stores.get(i).collabs.add(c);
-    
-    }
+        Product prd=new Product(null,0,0,null,0,null);
+        for (int i = 0; i < stores.size(); i++) 
+        {
+            if (storename.contentEquals(stores.get(i).getStoreName())) {
+                for (int j = 0; j < (stores.get(i).prds.size()); j++) {
+                    if (productname.contentEquals(stores.get(i).prds.get(j).getProductName()))
+                    {
+                        history.oldPrices.add(stores.get(i).prds.get(j));
+                        stores.get(i).prds.get(j).setPrice(price);
+                        prd=stores.get(i).prds.get(j);
+                    }
+                }
+            }
+        }
+   return prd;
     }
 
+    public void deletePdsInStore( String storename, String productname, ArrayList<Store> stores, Product z) {
+
+        for (int i = 0; i < stores.size(); i++) {
+            if (storename.contentEquals(stores.get(i).getStoreName())) {
+                for (int j = 0; j < (stores.get(i).prds.size()); j++) {
+                    if (productname.contentEquals(stores.get(i).prds.get(j).getProductName())) {
+                        stores.get(i).prds.remove(stores.get(i).prds.get(j));
+                    }
+                }
+            }
+        }
+
+    }
+
+    public void addcollabs(String s, ArrayList<Store> stores, Collaborator c) {
+        for (int i = 0; i < stores.size(); i++) {
+            if (s.contentEquals(stores.get(i).getStoreName())) {
+                stores.get(i).collabs.add(c);
+            }
+
+        }
+    }
 }
 
-}
+//public void undoAdd(String x,ArrayList <Store> stores,Product z,ProductDatabase px,History history)
+//{
+//  this.deletePdsInStore();
+//}
+//}

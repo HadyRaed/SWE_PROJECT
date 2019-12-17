@@ -5,7 +5,7 @@ public class StoreOwner extends User {
 
     ArrayList<Store> storesOfStoreOwner = new ArrayList<>();
    // ArrayList<Collaborator> collaborators = new ArrayList<>();
-    collaboratorHandler collabHandler= new collaboratorHandler(); 
+
 
     StoreOwner(String userName, String password, String email) {
         super(userName, password, email);

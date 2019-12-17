@@ -1,8 +1,5 @@
 
-import java.sql.Time;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -64,13 +61,13 @@ public void set(String storeName, String storeLocation, String storeCategory)
             return false;
         }
     }
-    public void editPdsInStore(StoreOwnerController s,int price,String n)
+    public void editPdsInStore(StoreOwnerController s,String storename, String productname, int price, ArrayList<Store> stores,History history)
     {
-    s.editPdsInStore(prds,price,n);
+    s.editPdsInStore(storename,productname,price,stores,history);
     }
-     public void deletePdsInStore(StoreOwnerController s,String n)
+     public void deletePdsInStore(StoreOwnerController s,String storename, String productname, int price, ArrayList<Store> stores, Product z)
     {
-    s.deletePdsInStore(prds,n);
+    s.deletePdsInStore(storename,productname,stores,z);
     }
 
     @Override
@@ -78,8 +75,6 @@ public void set(String storeName, String storeLocation, String storeCategory)
         System.out.println(stats.getNumOfProducts());
         System.out.println(stats.getNumOfView());
         System.out.println(stats.getSoldOutProducts());
-//To change body of generated methods, choose Tools | Templates.
     }
-
 }
 
