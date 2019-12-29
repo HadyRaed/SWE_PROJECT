@@ -6,11 +6,17 @@ public class ProductDatabase {
     ArrayList<Product> products = new ArrayList<>();
     int Counter = 0;
 
-    public void add(Product p) {
+    public boolean add(Product p, BrandDatabase bdb) {
 
-        products.add(p);
-        Counter++;
+        if (searchProduct(p) == -1) {
+            if (bdb.CheckBrandName(p.getBrandName())) {
+                products.add(p);
+                Counter++;
+                return true;
 
+            }
+        }
+        return false;
     }
 
     public int getCounter() {

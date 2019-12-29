@@ -34,7 +34,13 @@ public class SignupUi {
 
         StoreOwner storeOwneri = new StoreOwner(Name1, Pass1, Mail1);
         StoreOwnerController s = new StoreOwnerController();
-        s.validateRegister(storeOwneri, sdb);
+       if ( s.validateRegister(storeOwneri, sdb))
+       {
+       System.out.println("Registered Successfully");
+       }
+       else {
+       System.out.println("Can't register");
+       }
     }
 
 }

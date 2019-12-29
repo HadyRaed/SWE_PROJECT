@@ -1,13 +1,11 @@
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
+
+
 
 public class Admin {
 
     private String ID;
     private String password;
-    AdminStats as = new AdminStats();
 
     Admin(String ID, String password) {
         this.ID = ID;
@@ -24,15 +22,7 @@ public class Admin {
 
     }
 
-    public void addProduct(Product product, ProductDatabase pd) throws IOException {
-        pd.add(product);
-
-    }
-
-    public void addBrand(Brand brand, BrandDatabase bd) {
-        bd.add(brand);
-
-    }
+   
 
     public boolean login(Admin admin1, Admindb adminlogin) {
         boolean y = adminlogin.searchUser(admin1);
@@ -43,9 +33,6 @@ public class Admin {
         }
     }
 
-    public void CreateStat(CustomerDatabase cd, ProductDatabase pd) {
-        as.setSumOfUsers(cd);
-        as.setSumOfProducts(pd);
-    }
+   
 
 }

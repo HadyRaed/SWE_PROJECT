@@ -6,13 +6,10 @@ public class StoreOwnerController {
 
    
 
-    public void validateRegister(StoreOwner x, StoreOwnerDatabase sdb) {
+    public boolean validateRegister(StoreOwner x, StoreOwnerDatabase sdb) {
 
-        if (sdb.addStoreOwner(x) == true) {
-            System.out.println("Registered Successfully");
-        } else {
-            System.out.println("This Username already exists");
-        }
+        return sdb.addStoreOwner(x) ;
+         
     }
 
     public boolean validateLogin(StoreOwner x, StoreOwnerDatabase sdb) {
@@ -68,9 +65,7 @@ public class StoreOwnerController {
         if (flag == false) {
             storesOfStoreOwner.add(x);
             System.out.println("Your Store has been added successfully");
-            for (int i = 0; i < storesOfStoreOwner.size(); i++) {
-                System.out.println(storesOfStoreOwner.get(i));
-            }
+        
         }
 
     }

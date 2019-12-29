@@ -5,13 +5,11 @@ public class StoreOwner extends User {
 
     ArrayList<Store> storesOfStoreOwner = new ArrayList<>();
 
-
     StoreOwner(String userName, String password, String email) {
         super(userName, password, email);
         // TODO Auto-generated constructor stub
 
     }
-
 
     public void register(StoreOwner storeOwner1, StoreOwnerDatabase storeOwnerReg) {
         storeOwnerReg.addStoreOwner(storeOwner1);
@@ -22,40 +20,16 @@ public class StoreOwner extends User {
         storeOwnerLogin.searchStoreOwner(storeOwner1);
     }
 
-    public void addStore(Store x,StoreOwnerController sc) {
-        sc.addStore(x,storesOfStoreOwner);
+    public void addStore(Store x, StoreOwnerController sc) {
+        sc.addStore(x, storesOfStoreOwner);
     }
 
-
-
-public void addPds (StoreOwnerController stc,String y,Product p,ProductDatabase pd)
-{
-
-stc.addPdsInStore(y,storesOfStoreOwner,p,pd);
-    
-
-
+    public void addPds(StoreOwnerController stc, String y, Product p, ProductDatabase pd) {
+         stc.addPdsInStore(y, storesOfStoreOwner, p, pd);
 }
 
- public void addcollab (StoreOwnerController stc,String StoreName,Collaborator c)
- {
-stc.addcollabs(StoreName,storesOfStoreOwner,c);
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public void addcollab(StoreOwnerController stc, String StoreName, Collaborator c) {
+        stc.addcollabs(StoreName, storesOfStoreOwner, c);
+    }
 
 }

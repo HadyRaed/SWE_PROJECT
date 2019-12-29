@@ -10,27 +10,59 @@ public class ExistingStoreProductUi {
 
         String prdctName = x.next();
 
-        System.out.println("Enter product Serial number");
+            int SerialNum = 0;
+        boolean flag = false;
+        while (flag == false) {
+            System.out.println("Enter product Serial number");
+            Scanner Intscanner = new Scanner(System.in);
 
-        int prdctNo = x.nextInt();
+            if (Intscanner.hasNextInt()) {
+                SerialNum = Intscanner.nextInt();
+                flag = true;
+            } else {
+                System.out.println("Please enter a Number");
+            }
+
+        }
 
         System.out.println("Enter product category");
         String prdctCat = x.next();
 
-        System.out.println("Enter product Stock");
-        int prdctStock = x.nextInt();
+             int Stock = 0;
+        boolean flag1 = false;
+        
+        while (flag1 == false) {
+            System.out.println("Enter Stock");
+            Scanner Inttscanner = new Scanner(System.in);
+
+            if (Inttscanner.hasNextInt()) {
+                SerialNum = Inttscanner.nextInt();
+                flag1 = true;
+            } else {
+                System.out.println("Please enter a Number");
+            }
+
+        }
 
         System.out.println("Enter Brand Name");
         String brndName = x.next();
-        Product product = new Product(prdctName, prdctNo, 0, prdctCat, prdctStock, brndName);
+        Product product = new Product(prdctName, SerialNum, 0, prdctCat,Stock, brndName);
 
-        if (ac.validateBrand(brndName, bdb) && ac.validateProduct(storeOwnerii.storesOfStoreOwner.get(0), product, pdb)) {
-            
+        if (ac.validateBrand(brndName, bdb)||ac.validateProduct( product, pdb)) 
+        {
             storeOwnerii.addPds(ss, storename, product, pdb);
             System.out.println("Product is added");
-        } else if (ac.validateBrand(brndName, bdb) == false || ac.validateProduct(storeOwnerii.storesOfStoreOwner.get(0), product, pdb) == false) {
-            System.out.println("There is a problem, pleae check your data");
         }
+         
+        else if ((!ac.validateBrand(brndName, bdb)) && ac.validateProduct( product, pdb) == false) {
+         System.out.println("There is a problem, pleae check your data");
+        }}}
 
-    }
-}
+    
+
+
+
+
+
+
+

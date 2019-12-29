@@ -3,15 +3,13 @@ import java.util.Scanner;
 public class LoginUi {
 
     CAddStoreUi CAdd = new CAddStoreUi();
-    BrandDatabase bdb = new BrandDatabase();
     AdminController ac = new AdminController();
-    ProductDatabase pdb = new ProductDatabase();
     ExistingStoreUi ExStore = new ExistingStoreUi();
     CreateStoreUi CrStore = new CreateStoreUi();
     BuyUi buyUi = new BuyUi();
     Scanner x = new Scanner(System.in);
 
-    public void showLoginFormC(CustomerDatabase cdb) {
+    public void showLoginFormC(CustomerDatabase cdb,ProductDatabase pdb) {
         System.out.println("Enter your name");
 
         String Namee = x.next();
@@ -38,7 +36,7 @@ public class LoginUi {
         }
     }
 
-    public void showLoginFormS(StoreOwnerDatabase sdb) {
+    public void showLoginFormS(StoreOwnerDatabase sdb,ProductDatabase pdb,BrandDatabase bdb) {
         System.out.println("Enter your name");
         String Nameee = x.next();
 

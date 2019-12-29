@@ -38,7 +38,7 @@ public class Store extends TimerTask {
     }
 public void set(String storeName, String storeLocation, String storeCategory)
 {
-     this.storeName = storeName;
+        this.storeName = storeName;
         this.storeLocation = storeLocation;
         this.storeCategory = storeCategory;
 }

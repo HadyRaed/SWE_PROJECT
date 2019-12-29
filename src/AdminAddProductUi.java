@@ -1,31 +1,42 @@
+
+
+
 import java.io.IOException;
 import java.util.Scanner;
 
 public class AdminAddProductUi {
-public void AdminAddProduct(Admin o,ProductDatabase pdb) throws IOException
-{
-	System.out.println("Enter product Name");
-	Scanner brandN=new Scanner(System.in);
-	String brann=brandN.nextLine(); 
-	
-	System.out.println("Enter product Serial number");
 
-                Scanner brandNum=new Scanner(System.in);             
-                int brandnum=brandNum.nextInt(); 
-                
+    public void AdminAddProduct(AdminController ac, ProductDatabase pdb, BrandDatabase bdb) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter product Name");
 
-	
-	System.out.println("Enter product category");
-	Scanner brandCategory=new Scanner(System.in);
-	String brandcategory=brandCategory.nextLine(); 
-                
-                
-                System.out.println("Enter brand name");
-	String brandName=brandCategory.nextLine(); 
-	
+        String productName = scanner.nextLine();
 
-	 
-	Product product=new Product(brann,brandnum,0,brandcategory,0,brandName);
-	o.addProduct(product, pdb);
-}
+        int SerialNum = 0;
+        boolean flag = false;
+        while (flag == false) {
+            System.out.println("Enter product Serial number");
+            Scanner Intscanner = new Scanner(System.in);
+
+            if (Intscanner.hasNextInt()) {
+                SerialNum = Intscanner.nextInt();
+                flag = true;
+            } else {
+                System.out.println("Please enter a Number");
+            }
+
+        }
+        System.out.println("Enter product category");
+        String productCategory = scanner.nextLine();
+
+        System.out.println("Enter brand name");
+        String brandName = scanner.nextLine();
+
+        Product product = new Product(productName, SerialNum, 0, productCategory, 0, brandName);
+        if (ac.addProduct(product, pdb, bdb)) {
+            System.out.println("Product is added Successfully\n");
+        } else {
+            System.out.print("The product name already exists or the brand doesn't exist, try again \n \n");
+        }
+    }
 }

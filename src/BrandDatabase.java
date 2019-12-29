@@ -15,6 +15,8 @@ public class BrandDatabase {
      * @return
      */
     public boolean CheckBrandName(String target) {
+        //for (int i=0;i<brands.size();i++)
+        //{System.out.println(brands.get(i).getBrandName());}
 
         if (brands.isEmpty()) {
             return false;

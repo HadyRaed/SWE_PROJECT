@@ -7,7 +7,7 @@
             <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/AdminLogin.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/Collaborator.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/Login.java</file>
-            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/collaboratorHandler.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/CollaboratorController.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/StoreOwnerController.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/Main.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/StoreOwner.java</file>
@@ -21,6 +21,29 @@
             <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/CustomerController.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/ExistingStoreUi.java</file>
             <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/BuyUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/Command.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/UndoAddCommand.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/ObjectCollector.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/StoreOwnerUndoController.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/CAddStoreUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/History.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/User.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/UndoEditCommand.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/simpleControl.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/Admin.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/AdminLoginUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/AdminStats.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/Admindb.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/Brand.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/BrandDatabase.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/CreateStatsUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/CreateStoreUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/CustomerDatabase.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/ExistingStoreProductUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/LoginUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/SignupUi.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/Statistics.java</file>
+            <file>file:/D:/CS/YEAR%203/term%201/SWE_PROJECT/src/StoreOwnerBuyController.java</file>
         </group>
     </open-files>
 </project-private>

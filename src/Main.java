@@ -7,7 +7,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         CustomerDatabase cdb = new CustomerDatabase();
         StoreOwnerDatabase sdb = new StoreOwnerDatabase();
-
+        ProductDatabase pdb = new ProductDatabase();
+        BrandDatabase bdb = new BrandDatabase();
         SignupUi Signup = new SignupUi();
         LoginUi Login = new LoginUi();
         AdminLoginUi AdminLogin = new AdminLoginUi();
@@ -49,16 +50,16 @@ public class Main {
                     switch (f) {
                         case 1:
 
-                            Login.showLoginFormC(cdb);
+                            Login.showLoginFormC(cdb,pdb);
 
                             break;
                         case 2:
-                            Login.showLoginFormS(sdb);
+                            Login.showLoginFormS(sdb,pdb,bdb);
                     }
                     break;
 
                 case 3:
-                    AdminLogin.ShowAdminLoginForm(cdb);
+                    AdminLogin.ShowAdminLoginForm(cdb,pdb,bdb);
 
             }
 
