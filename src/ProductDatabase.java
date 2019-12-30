@@ -34,7 +34,9 @@ public class ProductDatabase {
                 if (product.getProductName().contentEquals(products.get(i).getProductName())) {
 
                     x = 1;
-                    y = product.getStock();
+                   
+
+                    y = products.get(i).getStock();
 
                 }
             }

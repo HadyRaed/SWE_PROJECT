@@ -24,7 +24,7 @@ public class LoginUi {
         Customer customerii = new Customer(Namee, Pass, Maill);
         CustomerController cc = new CustomerController();
         if (cc.validateLogin(customerii, cdb) == true) {
-            System.out.println("1-Add a store \n 2-Buy product");
+            System.out.println("1-Add a store \n2-Buy product");
             int val = x.nextInt();
             switch (val) {
                 case 1:

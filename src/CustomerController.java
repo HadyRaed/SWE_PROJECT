@@ -25,29 +25,30 @@ public class CustomerController {
         }
     }
 
-    public boolean validateSearch(Customer x, ProductDatabase pdb, Product product, CustomerController cc,int givenQuantity) {
-
+    public boolean validateSearch(Customer x, ProductDatabase pdb, Product product, CustomerController cc, int wantedQuantity) {
         if (pdb.searchProduct(product) != -1) {
-            cc.Buy(givenQuantity,pdb.searchProduct(product), x);
-            return true;
-        } else 
-            return false;
+
+            if (cc.Buy(wantedQuantity, pdb.searchProduct(product), x)) {
+
+                return true;
+            }
+
+        }
+        return false;
     }
 
-    public boolean Buy(int givenQuantity,int wanted, Customer cust) {
-       
+    public boolean Buy(int wantedQuantity, int stock, Customer cust) {
 
-        if (givenQuantity> wanted) {
+        if (wantedQuantity > stock) {
             return false;
         } else {
-            double newPrice=1;
-            if (givenQuantity>=2)
-            {
-            newPrice+=newPrice*0.10;
+            double newPrice = 1;
+
+            if (wantedQuantity >= 2) {
+                newPrice += newPrice * 0.10;
             }
             return true;
 
         }
-
     }
 }

@@ -32,7 +32,10 @@ public class AdminAddProductUi {
         System.out.println("Enter brand name");
         String brandName = scanner.nextLine();
 
-        Product product = new Product(productName, SerialNum, 0, productCategory, 0, brandName);
+        System.out.println("Enter Stock");
+        int stock=scanner.nextInt();
+        
+        Product product = new Product(productName, SerialNum, 0, productCategory,stock , brandName);
         if (ac.addProduct(product, pdb, bdb)) {
             System.out.println("Product is added Successfully\n");
         } else {
