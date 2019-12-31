@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 public class BuyUi {
-
+//BuyFunction
     public void buy(ProductDatabase pdb, Customer customerii, CustomerController cc) {
         System.out.println("Enter prodcut name");
         Scanner x = new Scanner(System.in);
