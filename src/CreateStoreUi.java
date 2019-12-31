@@ -17,6 +17,7 @@ public class CreateStoreUi {
 
         Store store = new Store(storeName, storeLocation, storeCategory);
 
-        storeOwnerii.addStore(store,sc);
+        if(storeOwnerii.addStore(store,sc)){System.out.println("Store is added");}
+        else System.out.println("Can't be added");
     }
 }

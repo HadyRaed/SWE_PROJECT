@@ -15,23 +15,19 @@ public class StoreOwnerController {
     public boolean validateLogin(StoreOwner x, StoreOwnerDatabase sdb) {
 
         if (sdb.searchStoreOwner(x) == true) {
-            System.out.println("Logged in successfully");
             return true;
         } else {
-            System.out.println("Login failed");
             return false;
         }
     }
 
     public boolean validateStore(StoreOwner x, String storeName) {
         if (x.storesOfStoreOwner.size() == 0) {
-            System.out.println("Don't exists");
 
             return false;
         } else {
             for (int i = 0; i < x.storesOfStoreOwner.size(); i++) {
                 if (storeName.contentEquals(x.storesOfStoreOwner.get(i).getStoreName())) {
-                    System.out.println("Exists");
 
                     return true;
 
@@ -39,35 +35,28 @@ public class StoreOwnerController {
 
             }
         }
-        System.out.println("Don't exists");
         return false;
     }
 
-    public void addStore(Store x, ArrayList<Store> storesOfStoreOwner) {
-        boolean flag = false;
+    public boolean addStore(Store x, ArrayList<Store> storesOfStoreOwner) {
+        boolean flag = true;
 
-        if (storesOfStoreOwner.size() == 0) {
-            storesOfStoreOwner.add(x);
-            flag = true;
-            System.out.println("Your Store has been added successfully");
-
-        } else {
+      
             for (int i = 0; i < storesOfStoreOwner.size(); i++) {
                 if (storesOfStoreOwner.get(i).getStoreName().contentEquals(x.getStoreName())) {
-                    flag = true;
-                    System.out.println("You have a store with the same name");
-                    break;
+                    flag = false;
+                    return false;
+                }}
 
-                }
-
-            }
-        }
-        if (flag == false) {
+            
+        
+        if (flag == true) {
             storesOfStoreOwner.add(x);
-            System.out.println("Your Store has been added successfully");
+            
+            return true;
         
         }
-
+return false;
     }
 
     public boolean addPdsInStore(String storename, ArrayList<Store> stores, Product z, ProductDatabase pdb) {
@@ -83,7 +72,7 @@ public class StoreOwnerController {
 
     public Product editPdsInStore(String storename, String productname, double price, ArrayList<Store> stores,History history) 
     {
-        Product prd=new Product(null,0,0,null,0,null);
+        Product prd=null;
         for (int i = 0; i < stores.size(); i++) 
         {
             if (storename.contentEquals(stores.get(i).getStoreName())) {
@@ -93,11 +82,13 @@ public class StoreOwnerController {
                         history.oldPrices.add(stores.get(i).prds.get(j));
                         stores.get(i).prds.get(j).setPrice(price);
                         prd=stores.get(i).prds.get(j);
+                           return prd;
+
                     }
                 }
             }
         }
-   return prd;
+    return null;
     }
 
     public void deletePdsInStore( String storename, String productname, ArrayList<Store> stores, Product z) {

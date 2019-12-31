@@ -30,10 +30,8 @@ public class Admindb {
         }
         if (x == 1) {
 
-            System.out.println("Welcome back");
             return true;
         } else {
-            System.out.println("Login failed");
             return false;
         }
     }

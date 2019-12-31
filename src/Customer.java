@@ -27,30 +27,11 @@ public class Customer extends User {
         customerlogin.searchUser(customer1);
     }
 
-    public void addStore(Store x) {
-        boolean flag = false;
-
-        if (onlinestores.size() == 0) {
-            onlinestores.add(x);
-            flag = true;
-            System.out.println("Your Store has been added successfully");
-
+    public boolean addStore(Store x, CustomerController cc) {
+        if (cc.addStore(x, onlinestores)) {
+            return true;
         } else {
-            for (int i = 0; i < onlinestores.size(); i++) {
-                if (onlinestores.get(i).getStoreName().contentEquals(x.getStoreName())) {
-                    flag = true;
-                    System.out.println("You have a store with the same name");
-                    break;
-
-                }
-
-            }
-        }
-        if (flag == false) {
-            onlinestores.add(x);
-            System.out.println("Your Store has been added successfully");
-
+            return false;
         }
     }
-
 }

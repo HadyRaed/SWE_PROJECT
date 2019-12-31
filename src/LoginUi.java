@@ -28,7 +28,7 @@ public class LoginUi {
             int val = x.nextInt();
             switch (val) {
                 case 1:
-                    CAdd.AddStore(customerii);
+                    CAdd.AddStore(customerii,cc);
                     break;
                 case 2:
                     buyUi.buy(pdb, customerii, cc);
@@ -49,10 +49,12 @@ public class LoginUi {
         
         StoreOwner storeOwnerii = new StoreOwner(Nameee, Passs, Mailll);
         StoreOwnerController ss = new StoreOwnerController();
+        StoreOwnerBuyController sob = new StoreOwnerBuyController();
         boolean check = true;
-        if (ss.validateLogin(storeOwnerii, sdb)) {
+        if (ss.validateLogin(storeOwnerii, sdb))
+        {   System.out.println("Logged In Successfully");
             while (check) {
-                System.out.println("1-Have an existing store?\n2-Create a store \n3-Logout");
+                System.out.println("1-Have an existing store?\n2-Create a store \n3-Buy\n4-Logout");
 
                 int k = x.nextInt();
 
@@ -63,12 +65,19 @@ public class LoginUi {
 
                     CrStore.CreateStore(storeOwnerii,ss);
 
-                } else if (k == 3) {
+                }
+                else if(k == 3)
+                {
+                buyUi.buyS(pdb, storeOwnerii,sob);
+                
+                }
+                else if (k == 4) {
                     check = false;
                 }
 
             }
         }
+        else System.out.println("Can't login");
     }
 
     private void Switch(int val) {

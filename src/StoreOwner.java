@@ -20,8 +20,10 @@ public class StoreOwner extends User {
         storeOwnerLogin.searchStoreOwner(storeOwner1);
     }
 
-    public void addStore(Store x, StoreOwnerController sc) {
-        sc.addStore(x, storesOfStoreOwner);
+    public boolean addStore(Store x, StoreOwnerController sc) {
+        if(sc.addStore(x, storesOfStoreOwner))
+        {return true;}
+        else return false;
     }
 
     public void addPds(StoreOwnerController stc, String y, Product p, ProductDatabase pd) {

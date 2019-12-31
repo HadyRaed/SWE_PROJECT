@@ -5,7 +5,7 @@ public class CAddStoreUi {
 
     Scanner x = new Scanner(System.in);
 
-    public void AddStore(Customer customerii) {
+    public void AddStore(Customer customerii, CustomerController cc) {
 
         System.out.println("Enter Store Name");
         String storeName = x.next();
@@ -15,6 +15,10 @@ public class CAddStoreUi {
 
         Store store = new Store(storeName, "Online", storeCategory);
 
-        customerii.addStore(store);
+        if (customerii.addStore(store, cc)) {
+            System.out.println("Store is added");
+        } else {
+            System.out.println("Can't add");
+        }
     }
 }
