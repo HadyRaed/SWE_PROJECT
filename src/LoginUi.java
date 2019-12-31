@@ -6,6 +6,7 @@ public class LoginUi {
     AdminController ac = new AdminController();
     ExistingStoreUi ExStore = new ExistingStoreUi();
     CreateStoreUi CrStore = new CreateStoreUi();
+    //StoreOwnerUndoUi undo =  new  StoreOwnerUndoUi();
     BuyUi buyUi = new BuyUi();
     Scanner x = new Scanner(System.in);
 
@@ -54,7 +55,7 @@ public class LoginUi {
         if (ss.validateLogin(storeOwnerii, sdb))
         {   System.out.println("Logged In Successfully");
             while (check) {
-                System.out.println("1-Have an existing store?\n2-Create a store \n3-Buy\n4-Logout");
+                System.out.println("1-Have an existing store?\n2-Create a store \n3-Buy\n6-Logout");
 
                 int k = x.nextInt();
 
@@ -71,7 +72,15 @@ public class LoginUi {
                 buyUi.buyS(pdb, storeOwnerii,sob);
                 
                 }
-                else if (k == 4) {
+               // else if(k == 4)
+                //{
+                //undo.UndoAdd(null, ss, Nameee, Nameee, storeOwnerii, null);
+                //}
+                 //else if(k == 5)
+                //{
+                //undo.UndoEdit(null, ss, Nameee, Nameee, storeOwnerii, null);
+                //}
+                else if (k == 6) {
                     check = false;
                 }
 

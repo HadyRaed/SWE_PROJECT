@@ -9,6 +9,7 @@ public class AdminAddProductUi {
     public void AdminAddProduct(AdminController ac, ProductDatabase pdb, BrandDatabase bdb) throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter product Name");
+        
 
         String productName = scanner.nextLine();
 
