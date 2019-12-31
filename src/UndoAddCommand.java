@@ -1,5 +1,5 @@
 
-public class UndoAddCommand implements Command {
+public class UndoAddCommand extends Command {
     StoreOwnerUndoController souc;
     ObjectCollector obj;
    public UndoAddCommand (StoreOwnerUndoController souc,ObjectCollector obj)

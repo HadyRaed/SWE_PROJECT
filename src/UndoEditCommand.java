@@ -1,5 +1,5 @@
 
-public class UndoEditCommand implements Command {
+public class UndoEditCommand extends Command {
 
     StoreOwnerUndoController souc;
     ObjectCollector obj;

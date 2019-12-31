@@ -7,7 +7,7 @@ public class simpleControl {
     }
     public void buttonWasPressed()
     {
-    slot.execute();
+        slot.execute();
     }
 }
  

@@ -1,4 +1,4 @@
 
-public interface Command {
-    public void execute();
+public abstract class Command {
+    public void execute() {}
 }

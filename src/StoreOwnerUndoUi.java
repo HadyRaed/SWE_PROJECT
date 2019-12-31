@@ -18,10 +18,7 @@ public class StoreOwnerUndoUi {
 
     public void UndoAdd(Store store, StoreOwnerController s, String storename, String productname, StoreOwner so, History history) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter product Name You want to undo the add of");
-
-        String productName = scanner.nextLine();
-
+        
         int SerialNum = 0;
         boolean flag = false;
         while (flag == false) {
@@ -57,9 +54,7 @@ public class StoreOwnerUndoUi {
     public void UndoEdit(Store store, StoreOwnerController s, String storename, String productname, StoreOwner so, History history) {
         
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter product Name You want to undo edit");
-
-        String productName = scanner.nextLine();
+    
 
         int SerialNum = 0;
         boolean flag = false;
@@ -81,6 +76,7 @@ public class StoreOwnerUndoUi {
         System.out.println("Enter brand name");
         String brandName = scanner.nextLine();
        
+        
         Product p = new Product(productname,SerialNum,0,productCategory,0,brandName);
 
         ObjectCollector obj = new ObjectCollector();

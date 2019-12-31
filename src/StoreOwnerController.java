@@ -21,21 +21,21 @@ public class StoreOwnerController {
         }
     }
 
-    public boolean validateStore(StoreOwner x, String storeName) {
+    public Store validateStore(StoreOwner x, String storeName) {
         if (x.storesOfStoreOwner.size() == 0) {
 
-            return false;
+            return null;
         } else {
             for (int i = 0; i < x.storesOfStoreOwner.size(); i++) {
                 if (storeName.contentEquals(x.storesOfStoreOwner.get(i).getStoreName())) {
 
-                    return true;
+                    return x.storesOfStoreOwner.get(i);
 
                 }
 
             }
         }
-        return false;
+        return null;
     }
 
     public boolean addStore(Store x, ArrayList<Store> storesOfStoreOwner) {
